@@ -47,12 +47,14 @@
 
         .content-wrapper { position: relative; z-index: 1; }
         
+        /* IMAGE CENTERING FIX */
         .profile-img { 
             width: 100px; 
             height: 100px; 
             border-radius: 50%; 
             border: 3px solid #1a2235; 
-            margin-bottom: 20px; 
+            margin: 0 auto 20px auto; /* Ye line image ko left-right se center karegi */
+            display: block; /* Ye line block element banayegi taaki margin center kaam kare */
             object-fit: cover; 
         }
 
