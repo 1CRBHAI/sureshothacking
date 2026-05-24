@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Prediction</title>
+    <title>sureshot hacking</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
         body { 
-            background-color: #03060c; /* Deep space background */
+            background-color: #03060c; 
             color: #fff; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             padding: 20px; 
-            /* Subtle stars effect */
             background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 4px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 3px);
             background-size: 550px 550px, 350px 350px;
             background-position: 0 0, 40px 60px;
@@ -33,7 +32,6 @@
             border: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        /* Center glowing effect */
         .container::before {
             content: ''; 
             position: absolute; 
@@ -77,6 +75,7 @@
         .subtitle { font-size: 14px; color: #e5e7eb; margin-bottom: 20px; }
         .features { font-size: 13px; color: #9ca3af; line-height: 1.8; margin-bottom: 30px; padding: 0 10px; font-weight: 400; }
         
+        /* FLASH UI & PULSE EFFECT BUTTON */
         .cta-btn {
             display: flex; 
             justify-content: center; 
@@ -90,10 +89,40 @@
             padding: 16px 20px; 
             border-radius: 30px; 
             margin-bottom: 30px; 
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 210, 0, 0.4);
+            animation: pulseGlow 2s infinite ease-in-out;
             transition: transform 0.2s;
         }
         
+        /* Moving Flash/Shimmer Line */
+        .cta-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 30%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            animation: flashEffect 3s infinite linear;
+        }
+        
         .cta-btn:active { transform: scale(0.97); }
+
+        /* Keyframes for Button Animation */
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px rgba(255, 210, 0, 0.4); transform: scale(1); }
+            50% { box-shadow: 0 0 25px rgba(255, 210, 0, 0.7); transform: scale(1.02); }
+            100% { box-shadow: 0 0 15px rgba(255, 210, 0, 0.4); transform: scale(1); }
+        }
+
+        @keyframes flashEffect {
+            0% { left: -60%; }
+            30% { left: 140%; }
+            100% { left: 140%; }
+        }
 
         .stats { 
             display: flex; 
@@ -117,7 +146,11 @@
             display: inline-block;
             width: 90%;
         }
-        .footer-credit span { color: #60a5fa; font-weight: 600; }
+        .footer-credit a { 
+            color: #60a5fa; 
+            font-weight: 600; 
+            text-decoration: none; 
+        }
     </style>
 
     <script>
@@ -130,7 +163,7 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         
-        fbq('init', 'YOUR_PIXEL_ID_HERE'); // <-- Yahan apna 15-digit Pixel ID daalein
+        fbq('init', 'YOUR_PIXEL_ID_HERE'); // <-- Apna Pixel ID yahan daalein
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
@@ -139,14 +172,14 @@
 
     <div class="container">
         <div class="content-wrapper">
-            <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img">
+            <img src="photo_2026-05-24_13-57-54.jpg" alt="Profile Image" class="profile-img">
 
             <div class="badge">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="#f6c04f"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
                 SAFE & TRUSTED
             </div>
 
-            <h1>SURESHOT HACKING </h1>
+            <h1>SURESHOT HACKING</h1>
             <p class="subtitle">🔥 Premium Prediction Community 🔥</p>
 
             <p class="features">Smart Predictions • Better Decisions • Winning Strategies • Daily Premium Updates</p>
@@ -174,16 +207,16 @@
             </div>
 
             <div class="footer-credit">
-                Ad setup by <span>@AdsEngine090</span>
+                Ad setup by <a href="https://t.me/AdsEngine090" target="_blank">@AdsEngine090</a>
             </div>
         </div>
     </div>
 
     <script>
         document.getElementById('telegramJoinBtn').addEventListener('click', function() {
-            // Firing Lead event for optimal ad tracking
-            fbq('track', 'Lead');
-            console.log("Lead event fired on Telegram click");
+            // Tracking changed to Subscribe Event
+            fbq('track', 'Subscribe');
+            console.log("Subscribe event tracked successfully.");
         });
     </script>
 
